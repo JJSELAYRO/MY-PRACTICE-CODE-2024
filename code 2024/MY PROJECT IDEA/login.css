@@ -1,0 +1,69 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+ background-color: black;
+
+}
+.header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 10px;
+display: flexbox;
+}
+.logo{
+    font-size:30px ;
+    color: white;
+    font-weight: 900;
+    position: sticky;
+    padding:10px ;
+    margin: 100px;
+    
+}
+ nav{
+    position: sticky;
+    text-align: center;
+    padding-left: 20%;
+    margin: 30px;
+    background-color: black;
+    
+ }
+
+ nav a{
+
+    color:white;
+    padding: 20px;
+    text-align: left;
+ }
+
+.home{
+padding: 40px;
+margin: 10%;
+color: white;
+}
+
+.home h2{
+padding: 5px;
+margin: 10px;
+font-weight: bold;
+font-size: 15px;
+}
+
+
+.home h3{
+    padding: 5px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 50px;
+    }
+    
+    .home h4{
+        margin: 10px;
+        font-weight: bold;
+        font-size: 20px;
+       padding-left: 10%;
+        }
+ 
+.about{
+    color: red;
+}

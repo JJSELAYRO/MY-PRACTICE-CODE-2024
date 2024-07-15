@@ -1,0 +1,341 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #004080; /* Dark blue */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    height: 50px;
+    width: auto;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00bfff; /* Light blue on hover */
+}
+
+
+/* About Section Styles */
+#about {
+    padding: 80px 0; /* Adjusted padding for better spacing */
+    background-color: #f2f2f2; /* Added background color for better contrast */
+}
+
+#about .container {
+    max-width: 1200px; /* Added to limit content width */
+    margin: 0 auto; /* Center align content */
+    padding: 20px; /* Added padding for spacing inside the container */
+}
+
+#about .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about .about-text {
+    flex: 1;
+    margin-right: 30px; /* Adjusted margin for better alignment */
+}
+
+#about .about-text h1 {
+    font-size: 36px; /* Slightly reduced font size for better readability */
+    text-align: right; /* Align text to the right */
+    margin-bottom: 15px; /* Added margin bottom for spacing */
+}
+
+#about .about-text h2 {
+    margin-bottom: 15px; /* Adjusted margin for better spacing */
+}
+
+#about .about-text p {
+    margin-bottom: 15px; /* Adjusted margin for better spacing */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+#about .tab-titles {
+    display: flex;
+    margin-bottom: 15px; /* Adjusted margin for better spacing */
+}
+
+#about .tab-links {
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 8px 12px; /* Added padding for clickable area */
+}
+
+#about .tab-links.active-link {
+    color: #00bfff;
+    font-weight: bold;
+}
+
+#about .tab-contents {
+    display: none;
+}
+
+#about .tab-contents.active-tab {
+    display: block;
+}
+
+
+/* Services Section Styles */
+#services {
+    background-color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.service {
+    margin-bottom: 50px;
+}
+
+.service i {
+    font-size: 3rem;
+    color: #00bfff;
+    margin-bottom: 20px;
+}
+
+.service h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service p {
+    margin-bottom: 20px;
+}
+
+.service a {
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service a:hover {
+    background-color: #004080;
+    color: #fff;
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    padding: 100px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.work {
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    transition: bottom 0.3s ease;
+}
+
+.work:hover .description {
+    bottom: -50px;
+}
+
+.description p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Skills Section Styles */
+#skills {
+    padding: 100px 0;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+.skill-info {
+    padding-bottom: 10px;
+}
+
+.skill-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    background-color: #cce0ff; /* Light blue background */
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar-inner {
+    background-color: #004080; /* Dark blue */
+    height: 100%;
+    width: 0; /* Start with width 0 for animation */
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 1s ease; /* Smooth transition for width change */
+}
+
+.skill-percent {
+    font-size: 1rem;
+    color: #666;
+}
+
+.skill-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group button {
+    background-color: #004080; /* Dark blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #00bfff; /* Light blue */
+    color: #fff;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #004080; /* Dark blue */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #00bfff; /* Light blue on hover */
+}
